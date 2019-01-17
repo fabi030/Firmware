@@ -346,7 +346,7 @@ Sensors::diff_pres_poll(const vehicle_air_data_s &raw)
 						  _parameters.air_cmodel,
 						  smodel, _parameters.air_tube_length, _parameters.air_tube_diameter_mm,
 						  diff_pres.differential_pressure_filtered_pa, raw.baro_pressure_pa,
-						  air_temperature_celsius);
+						  air_temperature_celsius, _parameters.dp_gain);
 
 		airspeed.true_airspeed_m_s = calc_true_airspeed_from_indicated(airspeed.indicated_airspeed_m_s, raw.baro_pressure_pa,
 					     air_temperature_celsius);
